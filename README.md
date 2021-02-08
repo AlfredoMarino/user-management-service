@@ -7,16 +7,16 @@ __Test Data__
     {
         "name": "Alfredo",
         "lastName": "Mariño",
-        "birthdate": "1995-05-15",
+        "birthdate": "1990-10-29",
         "aboutMe": "Software engineer",
         "photo": ":)"
     },
     {
-        "name": "Marco",
-        "lastName": "Mariño",
-        "birthdate": "1996-06-29",
-        "aboutMe": "publicist",
-        "photo": ":v"
+        "name": "Scarlett",
+        "lastName": "Johansson",
+        "birthdate": "1984-11-22",
+        "aboutMe": "actress",
+        "photo": ":3"
     }
 ]
 ```
