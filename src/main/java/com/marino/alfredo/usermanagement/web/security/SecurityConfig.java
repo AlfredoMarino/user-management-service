@@ -21,6 +21,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JWTFilterRequest jwtFilterRequest;
 
+    private final String[] SECURE_PATHS = new String[]{
+            "/**/auth/authenticate",
+            "/**/v2/api-docs",
+            "/configuration/ui",
+            "/swagger-resources/**",
+            "/configuration/security",
+            "/**/swagger-ui.html",
+            "/webjars/**",
+            "/swagger-ui/**"
+    };
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService);
@@ -29,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-                .authorizeRequests().antMatchers("/**/authenticate").permitAll()
+                .authorizeRequests().antMatchers(SECURE_PATHS).permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
