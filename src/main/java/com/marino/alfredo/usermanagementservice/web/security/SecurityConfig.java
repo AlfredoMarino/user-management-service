@@ -1,7 +1,7 @@
-package com.marino.alfredo.usermanagement.web.security;
+package com.marino.alfredo.usermanagementservice.web.security;
 
-import com.marino.alfredo.usermanagement.service.UserService;
-import com.marino.alfredo.usermanagement.web.security.filter.JWTFilterRequest;
+import com.marino.alfredo.usermanagementservice.service.UserService;
+import com.marino.alfredo.usermanagementservice.web.security.filter.JWTFilterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

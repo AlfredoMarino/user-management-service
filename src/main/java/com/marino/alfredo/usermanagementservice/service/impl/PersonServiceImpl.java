@@ -1,8 +1,8 @@
-package com.marino.alfredo.usermanagement.service.impl;
+package com.marino.alfredo.usermanagementservice.service.impl;
 
-import com.marino.alfredo.usermanagement.domain.Person;
-import com.marino.alfredo.usermanagement.repository.PersonRepository;
-import com.marino.alfredo.usermanagement.service.PersonService;
+import com.marino.alfredo.usermanagementservice.domain.Person;
+import com.marino.alfredo.usermanagementservice.repository.PersonRepository;
+import com.marino.alfredo.usermanagementservice.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

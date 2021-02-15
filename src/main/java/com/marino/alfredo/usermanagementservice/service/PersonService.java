@@ -1,6 +1,6 @@
-package com.marino.alfredo.usermanagement.service;
+package com.marino.alfredo.usermanagementservice.service;
 
-import com.marino.alfredo.usermanagement.domain.Person;
+import com.marino.alfredo.usermanagementservice.domain.Person;
 
 import java.util.List;
 

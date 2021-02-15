@@ -1,7 +1,7 @@
-package com.marino.alfredo.usermanagement.web.controller;
+package com.marino.alfredo.usermanagementservice.web.controller;
 
-import com.marino.alfredo.usermanagement.domain.Person;
-import com.marino.alfredo.usermanagement.service.PersonService;
+import com.marino.alfredo.usermanagementservice.domain.Person;
+import com.marino.alfredo.usermanagementservice.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.marino.alfredo.usermanagement.domain.dto;
+package com.marino.alfredo.usermanagementservice.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

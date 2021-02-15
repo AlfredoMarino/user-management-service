@@ -1,10 +1,10 @@
-package com.marino.alfredo.usermanagement;
+package com.marino.alfredo.usermanagementservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserManagementApplicationTests {
+class UserManagementServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

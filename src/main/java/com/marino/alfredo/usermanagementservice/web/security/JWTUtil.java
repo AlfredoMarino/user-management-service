@@ -1,4 +1,4 @@
-package com.marino.alfredo.usermanagement.web.security;
+package com.marino.alfredo.usermanagementservice.web.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

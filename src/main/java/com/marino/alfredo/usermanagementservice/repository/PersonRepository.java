@@ -1,6 +1,6 @@
-package com.marino.alfredo.usermanagement.repository;
+package com.marino.alfredo.usermanagementservice.repository;
 
-import com.marino.alfredo.usermanagement.domain.Person;
+import com.marino.alfredo.usermanagementservice.domain.Person;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

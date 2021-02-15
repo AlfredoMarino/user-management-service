@@ -1,6 +1,7 @@
-package com.marino.alfredo.usermanagement.web.security.filter;
+package com.marino.alfredo.usermanagementservice.web.security.filter;
 
-import com.marino.alfredo.usermanagement.service.UserService;
+import com.marino.alfredo.usermanagementservice.service.UserService;
+import com.marino.alfredo.usermanagementservice.web.security.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,9 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.marino.alfredo.usermanagement.web.security.JWTUtil.extractUsername;
-import static com.marino.alfredo.usermanagement.web.security.JWTUtil.validateToken;
-
 @Component
 public class JWTFilterRequest extends OncePerRequestFilter {
 
@@ -30,12 +28,12 @@ public class JWTFilterRequest extends OncePerRequestFilter {
 
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer")) {
             String jwt = authorizationHeader.substring(7);
-            String username = extractUsername(jwt);
+            String username = JWTUtil.extractUsername(jwt);
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UserDetails userDetails = userService.loadUserByUsername(username);
 
-                if (validateToken(jwt, userDetails)) {
+                if (JWTUtil.validateToken(jwt, userDetails)) {
                     UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                             userDetails,
                             null,

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.marino.alfredo</groupId>
-	<artifactId>user-management</artifactId>
+	<artifactId>user-management-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-management</name>
+	<name>user-management-service</name>
 	<description>User management API</description>
 	<properties>
 		<java.version>11</java.version>

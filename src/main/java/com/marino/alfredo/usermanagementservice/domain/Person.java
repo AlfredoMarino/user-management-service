@@ -1,4 +1,4 @@
-package com.marino.alfredo.usermanagement.domain;
+package com.marino.alfredo.usermanagementservice.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

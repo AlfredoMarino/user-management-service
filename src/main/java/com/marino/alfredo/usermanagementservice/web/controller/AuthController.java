@@ -1,9 +1,9 @@
-package com.marino.alfredo.usermanagement.web.controller;
+package com.marino.alfredo.usermanagementservice.web.controller;
 
-import com.marino.alfredo.usermanagement.domain.dto.AuthenticationRequest;
-import com.marino.alfredo.usermanagement.domain.dto.AuthenticationResponse;
-import com.marino.alfredo.usermanagement.service.UserService;
-import com.marino.alfredo.usermanagement.web.security.JWTUtil;
+import com.marino.alfredo.usermanagementservice.domain.dto.AuthenticationRequest;
+import com.marino.alfredo.usermanagementservice.domain.dto.AuthenticationResponse;
+import com.marino.alfredo.usermanagementservice.service.UserService;
+import com.marino.alfredo.usermanagementservice.web.security.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

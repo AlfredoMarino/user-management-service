@@ -1,13 +1,13 @@
-package com.marino.alfredo.usermanagement;
+package com.marino.alfredo.usermanagementservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserManagementApplication {
+public class UserManagementServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserManagementApplication.class, args);
+		SpringApplication.run(UserManagementServiceApplication.class, args);
 	}
 
 }
