@@ -11,12 +11,8 @@ import java.util.List;
 @Service
 public class PersonServiceImpl implements PersonService {
 
-    private final PersonRepository personRepository;
-
     @Autowired
-    public PersonServiceImpl(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
+    private PersonRepository personRepository;
 
     @Override
     public Person createPerson(Person person) {

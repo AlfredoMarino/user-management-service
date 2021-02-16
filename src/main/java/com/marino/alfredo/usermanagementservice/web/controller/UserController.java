@@ -13,8 +13,12 @@ import java.util.List;
 @RequestMapping("v1/users")
 public class UserController {
 
+    private final UserService userService;
+
     @Autowired
-    UserService userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping
     public void createUser(@RequestBody User user) {
