@@ -1,4 +1,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/test
+      uri: mongodb://localhost:27017/aamvdb
+
+application:
+  jwt:
+    secretKey: ${secretkey:securesecuresecuresecuresecuresecuresecuresecuresecuresecuresecure}
+    tokenExpirationAfterHours: ${tokenExpirationAfterHours:4}

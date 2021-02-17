@@ -2,7 +2,7 @@ package com.marino.alfredo.usermanagementservice.web.controller;
 
 import com.marino.alfredo.usermanagementservice.domain.dto.AuthenticationRequest;
 import com.marino.alfredo.usermanagementservice.domain.dto.AuthenticationResponse;
-import com.marino.alfredo.usermanagementservice.web.security.JWTUtil;
+import com.marino.alfredo.usermanagementservice.web.security.jwt.JWTHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +36,7 @@ public class AuthController {
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );
             UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
-            String jwt = JWTUtil.generateToken(userDetails);
+            String jwt = JWTHandler.generateToken(userDetails);
 
             return new ResponseEntity<>(new AuthenticationResponse(jwt), HttpStatus.OK);
         } catch (BadCredentialsException e) {

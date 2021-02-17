@@ -1,26 +1,31 @@
-package com.marino.alfredo.usermanagementservice.web.security;
+package com.marino.alfredo.usermanagementservice.web.security.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.ZonedDateTime;
 import java.util.Date;
 
-public class JWTUtil {
+@Configuration
+public class JWTHandler {
 
-    //TEMP
-    private static final String SECRET = "3e9869c65f2b96bee010602d2a1e6460b8f7bb58dbf2bbafc0da6f344701512e";
+    private static JWTConfig jwtConfig;
 
-    private JWTUtil() {
+    @Autowired
+    public JWTHandler(JWTConfig jwtConfig) {
+        this.jwtConfig = jwtConfig;
     }
 
     public static String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
-                .signWith(SignatureAlgorithm.HS256, SECRET)
+                .setExpiration(Date.from(ZonedDateTime.now().plusHours(jwtConfig.getTokenExpirationAfterHours()).toInstant()))
+                .signWith(SignatureAlgorithm.HS256, jwtConfig.getSecretKey())
                 .compact();
     }
 
@@ -37,6 +42,6 @@ public class JWTUtil {
     }
 
     private static Claims getClaims(String token) {
-        return Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
+        return Jwts.parser().setSigningKey(jwtConfig.getSecretKey()).parseClaimsJws(token).getBody();
     }
 }
