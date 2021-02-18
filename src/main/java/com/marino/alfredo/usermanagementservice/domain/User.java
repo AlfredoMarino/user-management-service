@@ -3,6 +3,7 @@ package com.marino.alfredo.usermanagementservice.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Document
@@ -10,7 +11,9 @@ public class User {
 
     @Id
     private String userId;
+    @NotBlank(message = "username is required")
     private String username;
+    @NotBlank(message = "password is required")
     private String password;
     private List<Role> roles;
 
