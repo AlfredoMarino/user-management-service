@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.marino.alfredo</groupId>
 	<artifactId>user-management-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>user-management-service</name>
-	<description>User management API</description>
+	<description>User management REST API</description>
 	<properties>
 		<java.version>11</java.version>
 		<springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>

@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}
+
+application:
+  jwt:
+    secretKey: ${secretkey:securesecuresecuresecuresecuresecuresecuresecuresecuresecuresecure}
+    tokenExpirationAfterHours: ${tokenExpirationAfterHours:4}
